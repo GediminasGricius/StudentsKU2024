@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\LecturerController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +31,13 @@ Route::get('/update/{id}',[StudentController::class,'update'])->name('student.up
 Route::post('/save/{id}',[StudentController::class,'save'])->name('student.save');
 
 Route::get('/delete/{id}',[StudentController::class,'delete'])->name('student.delete');
+
+Route::get('/lecturer/create', [LecturerController::class,'create'])->name('lecturer.create');
+Route::post('/lecturer/store', [LecturerController::class,'store'])->name('lecturer.store');
+
+Route::get('/course/create', [CourseController::class,'create'])->name('course.create');
+Route::post('/course/store',[CourseController::class,'store'])->name('course.store');
+
+Route::get('/courses', [CourseController::class,'index'])->name('courses');
+Route::get('/lecturers', [LecturerController::class,'index'])->name('lecturers');
+

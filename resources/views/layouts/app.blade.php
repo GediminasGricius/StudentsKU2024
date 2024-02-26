@@ -33,6 +33,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route("student.create") }}">Add new</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route("lecturers") }}">Lecturers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route("courses") }}">Courses</a>
+                        </li>
 
                     </ul>
 
