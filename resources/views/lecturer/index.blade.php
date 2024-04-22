@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('lecturer.create') }}" class="btn btn-info" >Add new lecturer</a>
+                        <a href="{{ route('lecturer.create') }}" class="btn btn-info" >{{ __('Add new lecturer') }}</a>
                         <hr>
                         <table class="table mt-3">
                             <thead>

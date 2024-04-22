@@ -6,14 +6,27 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
+                        <form method="post" action="{{ route('student.filter') }}">
+                            @csrf
+
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Surname</th>
+                                    <th>{{ __('Name') }}</th>
+                                    <th>{{ __('Surname') }}</th>
                                     <th>Phone</th>
                                     <th></th>
                                 </tr>
+                            <tr>
+                                <th>
+                                    <input class="form-control" name="filterName" value="">
+                                </th>
+                                <th></th>
+                                <th></th>
+                                <th>
+                                    <button class="btn btn-success">Filter</button>
+                                </th>
+                            </tr>
                             </thead>
                             <tbody>
                                 @foreach($students as $student)
@@ -29,6 +42,7 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        </form>
                     </div>
                 </div>
             </div>
